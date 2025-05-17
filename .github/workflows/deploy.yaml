@@ -16,7 +16,7 @@ jobs:
   deploy:
     needs: verify
     name: deploy
-    run_on: ubuntu_latest
+    runs-on: ubuntu_latest
     steps:
       - name: deploy
         run: echo deploying ...
