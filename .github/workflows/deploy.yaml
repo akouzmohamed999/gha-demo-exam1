@@ -2,22 +2,23 @@ on: push
 
 jobs:
   job: verify
-  name: lint & test
-  run_on: ubuntu_latest
-  steps:
-    - name: fetch
-      use: actions/checkout@v3
-    - name: lint
-      run: npm run lint
-    - name: test
-      run: npm run test
-    - name: build
-      run: npm run build
+    name: lint & test
+    run_on: ubuntu_latest
+    steps:
+      - name: fetch
+        use: actions/checkout@v3
+      - name: lint
+        run: npm run lint
+      - name: test
+        run: npm run test
+      - name: build
+        run: npm run build
   job: deploy
-  name: deploy
-  run_on: ubuntu_latest
-  steps:
-    - name: deploy
-      run: echo deploying ...
+    needs: verify
+    name: deploy
+    run_on: ubuntu_latest
+    steps:
+      - name: deploy
+        run: echo deploying ...
   
   
