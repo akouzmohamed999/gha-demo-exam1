@@ -1,7 +1,7 @@
 on: push
 
 jobs:
-  veirify:
+  verify:
     name: lint & test
     runs-on: ubuntu_latest
     steps:
