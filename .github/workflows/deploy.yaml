@@ -8,7 +8,7 @@ jobs:
       - name: fetch
         uses: actions/checkout@v3
       - name: install-dep
-        run: npm ci
+        run: npm ci && npm install -g eslint
       - name: lint
         run: npm run lint
       - name: test
