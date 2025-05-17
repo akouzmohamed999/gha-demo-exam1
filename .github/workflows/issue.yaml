@@ -5,4 +5,4 @@ jobs:
     name: display issue details
     runs-on: ubuntu-latest
     steps:
-        run: echo ${{github}}
+      - run: echo ${{github}}
